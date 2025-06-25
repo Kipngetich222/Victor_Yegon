@@ -1,0 +1,95 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+ */
+
+
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+}
+
+@keyframes morphBorder {
+  0%, 100% {
+    border-radius: 50% 50% 50% 50%;
+    transform: scale(1);
+  }
+  25% {
+    border-radius: 60% 40% 50% 50%;
+    transform: scale(1.05);
+  }
+  50% {
+    border-radius: 50% 60% 40% 50%;
+    transform: scale(1.1);
+  }
+  75% {
+    border-radius: 55% 45% 60% 40%;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: morphBorder 6s ease-in-out infinite;
+}
+
+
+@keyframes glowingBorder {
+  0% {
+    box-shadow: 0 0 20px 4px rgba(99, 102, 241, 0.6); /* indigo */
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    box-shadow: 0 0 25px 6px rgba(79, 70, 229, 0.7); /* purple-blue */
+    filter: hue-rotate(60deg);
+  }
+  50% {
+    box-shadow: 0 0 25px 8px rgba(16, 185, 129, 0.7); /* teal-green */
+    filter: hue-rotate(120deg);
+  }
+  75% {
+    box-shadow: 0 0 25px 6px rgba(236, 72, 153, 0.6); /* pink */
+    filter: hue-rotate(200deg);
+  }
+  100% {
+    box-shadow: 0 0 20px 4px rgba(99, 102, 241, 0.6);
+    filter: hue-rotate(360deg);
+  }
+}
+
+.glow-ring {
+  animation: glowingBorder 8s ease-in-out infinite;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent 70%);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.6);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    box-shadow: 0 0 35px rgba(236, 72, 153, 0.5);
+    filter: hue-rotate(80deg);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.6);
+    filter: hue-rotate(160deg);
+  }
+  75% {
+    box-shadow: 0 0 40px rgba(132, 204, 22, 0.5);
+    filter: hue-rotate(280deg);
+  }
+}
+
+.glow-ring {
+  animation: glowPulse 10s ease-in-out infinite;
+  background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+  border-radius: 9999px;
+  pointer-events: none;
+}
