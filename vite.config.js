@@ -45,5 +45,5 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
   },
   // Ensure static files (like .nojekyll) are copied to dist
-  publicDir: "public",
+  publicDir: "docs",
 });
