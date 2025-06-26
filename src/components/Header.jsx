@@ -39,7 +39,7 @@ const Header = () => {
               duration={500}
               className="text-xl font-bold text-indigo-600 hover:text-indigo-800 transition-colors cursor-pointer"
             >
-              Victor Yegon
+              Vic
             </Link>
           </div>
 
